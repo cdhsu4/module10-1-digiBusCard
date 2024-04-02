@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+html {
+    background-color: #23252C;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+.body{
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    background-color: #1A1B21;
+}
+
+@media (max-width: 450px) {
+    .body{
+        width: 450px;
+    }
+}
+
+.container-candidate-contact-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-photo{
+    width: 200px;
+    border-radius: 20px;
+}
+
+.container-candidate-contact-info>h1{
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.position-title{
+    color: #F3BF99;
+    font-weight: 400;
+}
+
+.contact-email{
+    color: #F5F5F5;
+    font-weight: 400;
+}
+
+.container-button{
+    display: flex;
+    gap: 20%;
+}
+
+.container-button>button{
+    width: 200px;
+    padding: 10px 20px;
+}
+
+.container-about-me {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-about-me>h2 {
+    color: #DCDCDC;
+    font-weight: 700;
+}
+
+.container-about-me>p {
+    color: #F5F5F5;
+    font-weight: 400;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #161619;
+
+    padding: 20px 40px;
+}
