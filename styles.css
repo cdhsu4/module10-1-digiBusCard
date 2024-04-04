@@ -14,72 +14,181 @@ h1, h2, p {
 .body{
     margin-left: auto;
     margin-right: auto;
-    width: 900px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 480px;
     background-color: #1A1B21;
+    border-radius: 1.25rem;
 }
 
-@media (max-width: 450px) {
-    .body{
-        width: 450px;
-    }
-}
-
-.container-candidate-contact-info{
+/* --- Info JS Component - CSS Styling - Section Start --- */
+/*.container-candidate-contact-info{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+}*/
 
 .profile-photo{
-    width: 200px;
-    border-radius: 20px;
+    width: 100%;
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
 }
 
-.container-candidate-contact-info>h1{
+h1, .position-title, .personal-website{
+    text-align: center;
+}
+
+.position-title, .personal-website{
+    font-weight: 400;
+}
+
+h1{
     color: #FFFFFF;
     font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
 }
 
 .position-title{
     color: #F3BF99;
-    font-weight: 400;
+    font-size: 1.25rem;
 }
 
-.contact-email{
+.personal-website{
     color: #F5F5F5;
-    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
 }
 
 .container-button{
     display: flex;
-    gap: 20%;
+    gap: 5%;
+    justify-content: center;
+    
+    margin-bottom: 3rem;
 }
 
 .container-button>button{
-    width: 200px;
+    width: 140px;
     padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 0.5rem;
 }
 
-.container-about-me {
-    display: flex;
-    flex-direction: column;
+.email-btn{
+    border: #D1D5DB;
 }
 
-.container-about-me>h2 {
+.linkedin-btn{
+    border: none;
+}
+
+.fa-envelope, .fa-linkedin-btn{
+    margin-right: 0.5rem;
+}
+
+.fa-linkedin-btn{
+    color: white;
+}
+
+.linkedin-btn{
+    background-color: #5093E2;
+    color: white;
+}
+
+/* --- About & Interests JS Components - CSS Styling - Section Start --- */
+.container-about-me, .container-interests {
+    margin-left: 5.5rem;
+    margin-right: 5.5rem;
+    line-height: 1.4rem;
+}
+
+.container-interests{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.container-about-me>h2, .container-interests>h2 {
     color: #DCDCDC;
     font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 
-.container-about-me>p {
+.container-about-me>p, .container-interests>p {
     color: #F5F5F5;
     font-weight: 400;
 }
 
+/* --- Footer JS Component - CSS Styling - Section Start --- */
 .footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #161619;
 
-    padding: 20px 40px;
+    padding: 1.25rem 2.5rem;
+    border-bottom-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+}
+
+.footer>i {
+    cursor: pointer;
+}
+
+.fa-square-twitter, .fa-square-facebook, .fa-square-instagram, .fa-linkedin-footer, .fa-square-github {
+    font-size: 2.25rem;
+    color: #918E9B;
+}
+
+/* -- Hover Color Palette Design Changes - Section Start -- */
+.body:hover footer{
+    background-color: #D5D4D8;
+}
+
+.body:hover h1, .body:hover h2{
+    color: #2B283A;
+}
+
+.body:hover .position-title {
+    color: #F47D27;
+}
+
+.body:hover .personal-website, .body:hover p{
+    color: #4a4e74;
+}
+
+.body:hover .container-button .email-btn{
+    border: 1px solid #D1D5DB;
+    background: #FFFFFF; 
+}
+
+.body:hover .container-button .linkedin-btn{
+    border: none;
+    background: #297FE5;
+}
+
+.body:hover div{
+    background-color: white;
+    border-radius: 1.5rem;
+}
+/*, .linkedin-btn:hover  .email-btn
+{
+    border-color: #D1D5DB;
+}*?
+
+/* --- Media Queries for Larger Screen - Section Start --- */
+@media (min-width: 760px) {
+    .body{
+        width: 760px;
+    }
+    
+    .container-button{
+    gap: 15%;
+    }
+    
+    .container-button>button{
+    width: 200px;
+    }
 }
